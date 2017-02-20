@@ -3,11 +3,12 @@
 import matplotlib.pyplot as plt
 import numpy
 from sklearn.datasets import *
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 
 def display_digits():
+    """ Reads in the 8x8 pictures of numbers and displays 10 of them """
     digits = load_digits()
     print(digits.DESCR)
     fig = plt.figure()
@@ -19,6 +20,11 @@ def display_digits():
 
 
 def train_model():
+    """ Reads in the 8x8 pictures of numbers. Then evaluates the accuracy of
+        the model when different percentages of the data is used as training
+        data. Plots the average accuracy of the model as a function of the
+        percent of data used to train.
+    """
     data = load_digits()
     num_trials = 10
     train_percentages = range(5, 95, 5)
