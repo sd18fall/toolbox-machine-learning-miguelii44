@@ -1,4 +1,4 @@
-""" Exploring learning curves for classification of handwritten digits """
+"""Explore learning curves for classification of handwritten digits"""
 
 import matplotlib.pyplot as plt
 import numpy
@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 
 
 def display_digits():
-    """ Reads in the 8x8 pictures of numbers and displays 10 of them """
+    """Reads in the 8x8 pictures of numbers and displays 10 of them"""
     digits = load_digits()
     print(digits.DESCR)
     fig = plt.figure()
@@ -20,10 +20,12 @@ def display_digits():
 
 
 def train_model():
-    """ Reads in the 8x8 pictures of numbers. Then evaluates the accuracy of
-        the model when different percentages of the data is used as training
-        data. Plots the average accuracy of the model as a function of the
-        percent of data used to train.
+    """Train a model on pictures of digits.
+    
+    Read in 8x8 pictures of numbers and evaluate the accuracy of the model
+    when different percentages of the data are used as training data. This function
+    plots the average accuracy of the model as a function of the percent of data
+    used to train it.
     """
     data = load_digits()
     num_trials = 10
