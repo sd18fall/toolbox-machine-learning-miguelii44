@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 
 
 def display_digits():
-    """Reads in the 8x8 pictures of numbers and displays 10 of them"""
+    """Read in the 8x8 pictures of numbers and display 10 of them"""
     digits = load_digits()
     print(digits.DESCR)
     fig = plt.figure()
