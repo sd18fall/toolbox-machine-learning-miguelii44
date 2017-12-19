@@ -8,12 +8,12 @@ from sklearn.linear_model import LogisticRegression
 
 
 def display_digits():
-    """Read in the 8x8 pictures of numbers and display 10 of them"""
+    """Read in the 8x8 pictures of numbers and display 10 of them."""
     digits = load_digits()
     print(digits.DESCR)
     fig = plt.figure()
     for i in range(10):
-        subplot = fig.add_subplot(5, 2, i+1)
+        subplot = fig.add_subplot(5, 2, i + 1)
         subplot.matshow(numpy.reshape(digits.data[i], (8, 8)), cmap='gray')
 
     plt.show()
@@ -21,11 +21,11 @@ def display_digits():
 
 def train_model():
     """Train a model on pictures of digits.
-    
+
     Read in 8x8 pictures of numbers and evaluate the accuracy of the model
-    when different percentages of the data are used as training data. This function
-    plots the average accuracy of the model as a function of the percent of data
-    used to train it.
+    when different percentages of the data are used as training data. This
+    y_size plots the average accuracy of the model as a function of the percent
+    of data used to train it.
     """
     data = load_digits()
     num_trials = 10
@@ -43,8 +43,8 @@ def train_model():
 
     fig = plt.figure()
     plt.plot(train_percentages, test_accuracies)
-    plt.xlabel('Percentage of Data Used for Training')
-    plt.ylabel('Accuracy on Test Set')
+    plt.xlabel("Percentage of Data Used for Training")
+    plt.ylabel("Accuracy on Test Set")
     plt.show()
 
 
